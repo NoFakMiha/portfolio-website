@@ -35,15 +35,17 @@ def send_email():
     name = request.form['name']
     email = request.form['email']
     message = request.form['message']
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=120) as connection:  # put in time out so that it can connect
+            connection.starttls()
+            connection.login(user=my_email, password=password)
+            connection.sendmail(from_addr=my_email, to_addrs="miha.novaktb@gmail.com", msg=f"Subject:Maybe new job\n\n"
+                                                                        f"Preson:{name}, Email: {email}\n\n"
+                                                                        f"Message: {message}")
 
-    with smtplib.SMTP("smtp.gmail.com", 587, timeout=120) as connection:  # put in time out so that it can connect
-        connection.starttls()
-        connection.login(user=my_email, password=password)
-        connection.sendmail(from_addr=my_email, to_addrs="miha.novaktb@gmail.com", msg=f"Subject:Maybe new job\n\n"
-                                                                    f"Preson:{name}, Email: {email}\n\n"
-                                                                    f"Message: {message}")
-
-        quote = "Email was sent!"
+            quote = "Email was sent!"
+    except:
+        quote = "Error on the server it is a free version :) email was not sent "
     return render_template("index.html", quote=quote)
 
 if __name__ == "__main__":
