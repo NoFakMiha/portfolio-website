@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Portfolio website" content="">
+    <meta name="Miha Novak" content="">
+
+    <title>My portfolio website</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/unicons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tooplate-style.css') }}">
+    <script src="https://kit.fontawesome.com/209182c71c.js" crossorigin="anonymous"></script>
+    
+
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i>Miha</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, I'm</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Miha Novak</span>
+                                    <span class="animated-item">Issue Solver</span>
+                                    <span class="animated-item">Pythonist</span>
+                                </div>
+                        </h1>
+
+                        <p>{{quote}}</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="{{url_for('circum_vitae') }}" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <a href="{{url_for('free_quote')}}" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="{{ url_for('static', filename='images/undraw/backend.png') }}" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="project py-5" id="project">
+        <div class="container">
+                
+                <div class="row">
+                  <div class="col-lg-11 text-center mx-auto col-12">
+
+                      <div class="col-lg-8 mx-auto">
+                        <h2>Things I have programed to learning how to code</h2>
+                      </div>
+
+                      <div class="owl-carousel owl-theme">
+                        <div class="item" >
+                          <div class="project-info" >
+                            <img src="{{ url_for('static', filename='images/project/project-image3.png') }}" class="img-fluid" alt="project image" >
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="{{ url_for('static', filename='images/project/project-image1.png') }}" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="{{ url_for('static', filename='images/project/project-image2.png') }}" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="{{ url_for('static', filename='images/project/project-image4.png') }}" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="project-info">
+                            <img src="{{ url_for('static', filename='images/project/project-image5.png') }}" class="img-fluid" alt="project image">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4">Skills</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr" style="padding-top: 10px;">
+                                  <span><i class="fab fa-python" style="font-size: 40px;"></i></span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Python</span><small>Language</small></h3>
+                                  <p>Python was my first language to learn and I love it. It is powerful, simple to write and debugging can be done on the fly.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"style="padding-top: 10px;">
+                              <span><i class="fab fa-js-square" style="font-size: 40px;"></i></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Javascript</span><small>Language</small></h3>
+                                <p>As I was facing a problem how to help our customer in which his location was needed I release that, I will have to learn Javascript.
+                                  With mix of Python and Javascript than I write one simple <a href="https://share-your-location-web-app.herokuapp.com/" target=”_blank”>Web app</a>  so that our costumer can use it to share their  location.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr" style="padding-top: 10px;">
+                                <span><i class="fas fa-flask" style="font-size: 40px;"></i></span>
+                            </div>
+                            <div class="timeline-info">
+                              <h3><span>Flask</span><small>Framework</small></h3>
+                                <p>To understand how the-back-end works I learned to use <a href="https://flask.palletsprojects.com/en/2.0.x/" target=”_blank”>Flask</a>. I lunched my <a href="https://miha-blog.herokuapp.com/" target=”_blank”>Blog</a> where users able to be verified and added with help of PostgreSQL
+                                and <a href="https://jinja.palletsprojects.com/en/3.0.x/" target=”_blank”>Jinja</a></p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr" style="padding-top: 10px;">
+                                <span><i class="fab fa-node-js" style="font-size: 40px;"></i></span>
+                            </div>
+                            <div class="timeline-info">
+                              <h3><span>Node.js</span><small>Framework</small></h3>
+                                <p>I do understand the basics of it, but I like Flask more because I can write it in Python code.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr" style="padding-top: 10px;">
+                                <span><i class="fas fa-torii-gate" style="font-size: 40px;"></i></span>
+                            </div>
+                            <div class="timeline-info">
+                              <h3><span>Jinja</span><small>Templating</small></h3>
+                                <p>Jinja is a fast, expressive, extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. Then the template is passed data to render the final document.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr" style="padding-top: 10px;">
+                                <span><i class="fas fa-database" style="font-size: 40px;"></i></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>PostgreSQL and Mysql<small>Database</small></h3>
+                                <p>To successfully stored data, of course I needed to learn PostgreSQL and Mysql.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr" style="padding-top: 10px;">
+                              <span><i class="far fa-file-excel" style="font-size: 40px;"></i></span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Pandas<small>Database</small></h3>
+                              <p>Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+                                built on top of the Python programming language. I made data visualisation with Plotly, Matplotlib and Seaborn.</p>
+                          </div>
+                      </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr" style="padding-top: 10px;">
+                              <span><i class="fas fa-server" style="font-size: 40px;"></i></span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>FastAPI and Rest API<small>API</small></h3>
+                              <p>For work I wrote a code which was scraping data from our partner Website and to share with our Software I build a n API with FastAPI Frame work and Rest API using Flask.</p>
+                          </div>
+                      </div>
+                      <div class="timeline-wrapper">
+                        <div class="timeline-yr" style="padding-top: 10px;">
+                            <span><i class="fas fa-screwdriver" style="font-size: 40px;"></i></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Selenium <small>Testing</small></h3>
+                            <p>Selenium is an open-source tool that automates web browsers. It provides a single interface that lets you write test scripts.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-wrapper">
+                      <div class="timeline-yr" style="padding-top: 10px;">
+                          <span><i class="fab fa-bootstrap" style="font-size: 40px;"></i></span>
+                      </div>
+                      <div class="timeline-info">
+                          <h3><span>Bootstrap <small>Tolls & Libraries</small></h3>
+                          <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                      </div>
+                  </div>
+                  <div class="timeline-wrapper">
+                    <div class="timeline-yr" style="padding-top: 10px;">
+                        <span><i class="fas fa-rocket" style="font-size: 40px;"></i></span>
+                    </div>
+                    <div class="timeline-info">
+                        <h3><span>Heroku <small>Deployment</small></h3>
+                        <p>Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.</p>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2019</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>100 Days of Code - The Complete Python Pro Bootcamp</span></h3>
+                                  <p>This was my first contact with the <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">Python</a>.
+                                  I learned how to use Selenium, Beautiful Soup, Request, Flask, Pandas, NumPy, Scikit Learn, Plotly, Matplotlib, Seaborn etc.</p>
+                             </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>The Complete Web Development Bootcamp</h3>
+                                <p>Was learning how to make a <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">website</a>. </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Build Responsive Real-World Websites with HTML and CSS Bootcamp</h3>
+                                <p>Learnd how to use modern HTML5, CSS3 and  <a href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/" target="_blank">web design.</a></p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2021</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>In progress: The Complete JavaScript Course 2021: From Zero to Expert!</h3>
+                              <p> I want to master also JavaScript so i started with this <a href="https://www.udemy.com/course/the-complete-javascript-course/" target="_blank">course.</a></p>
+                          </div>
+                      </div>
+                      <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2021</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>In near future: The Complete 2021 Flutter Development Bootcamp with Dart</h3>
+                            <p>How not to like a programing languange which can be used lunch in Windows, Web, iOS and Android.</a></p>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-5 mr-lg-5 col-12">
+            <div class="google-map w-100">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.094119940234!2d14.056907215627755!3d47.527030579179474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477113517c952813%3A0x6cbb5de887e74b33!2sUntergrimming%2038%2C%208951%20Untergrimming!5e0!3m2!1ssl!2sat!4v1633083557852!5m2!1ssl!2sat" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                <div class="contact-info-item">
+                  <h3 class="mb-3 text-white">Say hello</h3>
+                  <p class="footer-text mb-0">+43 699 1903064</p>
+                  <p><a href="mailto:miha.novaktb@gmail.com">miha.novaktb@gmail.com</a></p>
+                </div>
+
+                <ul class="social-links">
+                     <li><a href="https://github.com/NoFakMiha" class="fab fa-github" data-toggle="tooltip" data-placement="left" title="Github" target="_blank" style="font-size: 20px;"></a></li>
+                     <li><a href="https://www.instagram.com/miha.nofak/" class="fab fa-instagram" data-toggle="tooltip" data-placement="left" title="Instagram" target="_blank" style="font-size: 20px;"></a></li>
+                     
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+              <form action="/send_email" method="post">
+                <div class="row">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
+
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="ml-lg-auto col-lg-5 col-12">
+                    <input type="submit" class="form-control submit-btn" value="Send">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">Copyright &copy; 2021 Miha Novak. All rights reserved</p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/Headroom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jQuery.headroom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+  </body>
+</html>
