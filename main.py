@@ -20,7 +20,7 @@ def main_page():
 
 @app.route("/files" , methods=['GET', 'POST'])
 def circum_vitae():
-    return send_from_directory(app.config["CLIENT_PDF"], filename="CVMihaNovak.pdf", as_attachment=True)
+    return send_from_directory(app.config["CLIENT_PDF"], path="CVMihaNovak.pdf", as_attachment=True)
 
 @app.route("/quote" , methods=['GET', 'POST'])
 def free_quote():
